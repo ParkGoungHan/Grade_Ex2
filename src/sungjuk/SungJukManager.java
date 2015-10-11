@@ -18,7 +18,7 @@ public class SungJukManager {
 			switch(scan.next().charAt(0)) {
 			case 'i':
 			case 'I':
-				getData(); 
+				getData();
 				break;
 			case 'l':
 			case 'L':
@@ -48,12 +48,28 @@ public class SungJukManager {
 
 	private static void deleteData() {
 	
+		System.out.print(nameList[index] + "학생의 정보를 삭제하겠습니까?(Y/N) : ");
+		if(scan.next().charAt(0) =='Y') {
+			for(int i=index; i<count-1; i++) {
+				nameList[i] = nameList[1+1];
+				studentIdList[i] = studentIdList[1+1];
+				jumsuList[i] = jumsuList[1+1];
+			}
+			count--;
+			index = -1;
+		}else {
+			System.out.println("삭제를 취소합니다.");
+		}
 	}
 
 	private static void updateData() {
-		
+	
 		System.out.print("이름(" + nameList[index] + ") : ");
 		nameList[index] = scan.next();
+		System.out.print("학번(" + studentIdList[index] + ") : ");
+		studentIdList[index] = scan.next();
+		System.out.print("점수(" + jumsuList[index] + ") : ");
+		jumsuList[index] = scan.nextInt();
 	}
 
 	private static void searchData() {
