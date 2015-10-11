@@ -5,14 +5,15 @@ import java.util.Scanner;
 
 public class SungJukManagerV2 {
 
-	static final int MAX_COUNT = 100;
+
+	static final int MAX_COUNT = 100; 
 
 	static Student[] studentList = new Student[MAX_COUNT];
 
 	static int count = 0;
+	
 
 	static int index = -1;
-	
 
 	static Scanner scan = new Scanner(System.in);
 	
@@ -52,10 +53,9 @@ public class SungJukManagerV2 {
 
 	}
 
-	
 
 	private static void deleteData() {
-
+	
 		System.out.print(studentList[index].name + "학생의 정보를 삭제하겠습니까?(Y/N) : ");
 		if(scan.next().charAt(0) =='Y') {
 			for(int i=index; i<count-1; i++) {

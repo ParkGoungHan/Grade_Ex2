@@ -41,14 +41,13 @@ public class SungJukManager {
 				scan.close();
 				System.out.println("프로그램을 종료합니다.");
 				return;
-
 			}
 		}
 
 	}
 
 	private static void deleteData() {
-		
+	
 		System.out.print(nameList[index] + "학생의 정보를 삭제하겠습니까?(Y/N) : ");
 		if(scan.next().charAt(0) =='Y') {
 			for(int i=index; i<count-1; i++) {
@@ -64,7 +63,7 @@ public class SungJukManager {
 	}
 
 	private static void updateData() {
-		
+	
 		System.out.print("이름(" + nameList[index] + ") : ");
 		nameList[index] = scan.next();
 		System.out.print("학번(" + studentIdList[index] + ") : ");
