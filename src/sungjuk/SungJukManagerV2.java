@@ -5,12 +5,11 @@ import java.util.Scanner;
 
 public class SungJukManagerV2 {
 
-	static final int MAX_COUNT = 100; 
+	static final int MAX_COUNT = 100;
 
 	static Student[] studentList = new Student[MAX_COUNT];
 
 	static int count = 0;
-	
 
 	static int index = -1;
 	
@@ -47,11 +46,13 @@ public class SungJukManagerV2 {
 				scan.close();
 				System.out.println("프로그램을 종료합니다.");
 				return;
+
 			}
 		}
 
 	}
 
+	
 
 	private static void deleteData() {
 
@@ -69,6 +70,7 @@ public class SungJukManagerV2 {
 	}
 
 	private static void updateData() {
+	
 		System.out.print("이름(" + studentList[index].name + ") : ");
 		studentList[index].name = scan.next();
 		System.out.print("학번(" + studentList[index].studentId + ") : ");
